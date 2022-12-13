@@ -1,13 +1,13 @@
-package com.smaranika.movieproject;
+package com.smaranika.tutoringapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjectAppApplication {
+public class TutoringAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectAppApplication.class, args);
+		SpringApplication.run(TutoringAppApplication.class, args);
 	}
 
 }

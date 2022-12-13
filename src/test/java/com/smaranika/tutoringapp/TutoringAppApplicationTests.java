@@ -1,10 +1,10 @@
-package com.smaranika.movieproject;
+package com.smaranika.tutoringapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjectAppApplicationTests {
+class TutoringAppApplicationTests {
 
 	@Test
 	void contextLoads() {
