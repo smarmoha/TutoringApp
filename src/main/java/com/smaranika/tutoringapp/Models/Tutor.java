@@ -35,7 +35,7 @@ private String tutorname;
 
 @NotNull
 @Email(message="must be in email format")
-@Size(min=8, message="Must be at least 8 characters=.")
+@Size(min=8, message="Must be at least 8 characters.")
 private String email;
 
 @NotNull

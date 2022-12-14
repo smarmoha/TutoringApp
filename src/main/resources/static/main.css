@@ -3,3 +3,56 @@
         background-color: green;
         margin-bottom: 15px;
     }
+    
+    .label{
+
+    font-family: "Comic sans MS";
+    margin: 10px;
+    padding: 10px;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 200;
+
+}
+.textarea {
+    width: 350px;
+    height: 80px;
+}
+.nav {
+    /* width: 800px; */
+    height: 70px;
+    align-items: left;
+    background-color: rgb(25, 203, 164);
+    border-left: solid black;
+    border-right: solid black;
+    border-top: solid black;
+}
+.bgcolor{
+background-color:#00945e;
+background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+.bgcolorheader{
+background-color:#c0eb88;
+background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+   
+}
+.errormesg{
+	background-color:rgb(231, 236, 198);
+	color:red;
+}
+
+.container1{
+	height:800px;
+}
+
+.btnmargin{
+	margin:10px;
+}
+.hreftext{
+	color:white;
+}

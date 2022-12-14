@@ -19,14 +19,19 @@
       <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
    </head>
    <body>
-      <div class="container">
-         <div class="row">
-            <h1 class="col-sm">
-               Namastey 
-               <c:out value="${tutor.tutorname}" />
-            </h1>
-            <a href="/logout" class="col-sm">Log Out</a>
-         </div>
+		<h1>
+		   <div class="container d-flex justify-content-between bgcolorheader">
+			   <div>
+			      Hello
+			      <c:out value="${tutor.tutorname}" />
+			   </div>
+			   <div>
+			      <a href="/logout" class="col-sm">Log Out</a> 
+			   </div>
+			</div>   
+		</h1>
+
+         <div class="container bgcolor" height="800">
          <div class="row">
             <p class=col_sm>Task Schedule</p>
             <a href="tasks/new"><button>New Task</button></a> 
@@ -44,14 +49,14 @@
                   <tr>
                      <td scope="col">
           
-                        	<a href="/tasks/${task.id}/view"><c:out value="${task.taskname}"/></a>
+                        	<a href="/tasks/${task.id}/view" class="hreftext"><c:out value="${task.taskname}"/></a>
                        	
                      </td>
                      <td scope="col">
                         	<c:out value="${task.address}"/>
                      </td>
                      <td scope="col">
-                        <a href="/tasks/${task.id}/edit">Edit</a>
+                        <a href="/tasks/${task.id}/edit" class="hreftext">Edit</a>
                      </td>
                   </tr>
         	 </c:forEach>

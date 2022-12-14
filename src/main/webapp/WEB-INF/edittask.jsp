@@ -19,48 +19,58 @@
       <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
    </head>
    <body>
-        <!--div class=navbar-brand><c:out value="${task.taskname}" /></div--!>
-        
-        <nav class="navbar bg-light">
- 		 <div class="container-fluid">
-		    <a class="navbar-brand" href="#">
-   	   <img src="/images/discussion.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      <c:out value="${task.taskname}" />
-    	</a>
-  	</div>
-	</nav>
-      <div class="container"> 
+         <h1 class="container bgcolorheader">
+   		   <div class="container d-flex justify-content-between bgcolorheader">
+			   <div>
+			      <c:out value="${task.taskname}" />
+			   </div>
+			   <div>
+			      <a href="/logout" class="col-sm">Log Out</a> 
+			   </div>
+			</div>  
+		</h1>
+      <div class="container ontainer1">
+         <div class="container bgcolor row1 d-flex flex-row mb-3" height="800">
+            <div>
+               <img src="/images/discussion.jpeg" alt="Logo" width="200" height="200" class="d-inline-block align-text-top">
+            </div>
+            <div>
+               <form:form action="/tasks/update" method="post" modelAttribute="task" width="800" height="200">
+                  <input type="hidden" name="_method" value="put"/>
+                  <form:hidden path="id"/>
+                  <form:hidden path="tutor"/>
+                  <div class="p-2 input-group">
+                     <form:label path="taskname" class="col-form-label label">TaskName</form:label>
+                     <form:input path="taskname" class="form-controL"/>
+                     <form:errors path="taskname" class="form-control errormesg"/>
+                  </div>
+                  <div class="p-2 input-group">
+                     <form:label path="address" class="col-form-label label">Location</form:label>
+                     <form:input path="address" class="form-control"/>
+                     <form:errors path="address" class="form-control errormesg"/>
+                  </div>
+                  <div class="p-2 input-group">
+                     <form:label path="description" class="col-form-label label">Description</form:label>
+                     <form:textarea path="description" class="form-control textarea" id="addon-wrapping"/>
+                     <form:errors path="description" class="form-control errormesg"/>
+                  </div>
+                  		
+               <div class="form-row  d-flex mb-3 justify-content-around">
+                  <button class="buttons btn btn-primary">Submit</button>
+               </div>
+               
+            </div>
 
-
-		<form:form action="/tasks/update" method="post" modelAttribute="task">
-			<input type="hidden" name="_method" value="put"/>
-			<form:hidden path="id"/>
-			<form:hidden path="tutor"/>
-			<div class="p-2 d-flex justify-content-around input-group input-group-sm mb-3">
-				<form:label path="taskname" class="col-sm-2 col-form-label">TaskName</form:label>
-				<form:input path="taskname" class="form-control"/>
-				<form:errors path="taskname"/>
-			</div>
-
-			<div class="p-2 d-flex justify-content-around input-group input-group-sm mb-3">
-				<form:label path="address" class="col-sm-2 col-form-label">Location</form:label>
-				<form:input path="address" class="form-control"/>
-				<form:errors path="address"/>
-			</div>
-			
-			<div class="p-2 d-flex justify-content-around input-group input-group-sm mb-3">
-				<form:label path="description" class="col-sm-2 col-form-label">Description</form:label>
-				<form:textarea path="description" class="form-control"/>
-				<form:errors path="description"/>
-			</div>
-			
-			<div class=form-row>
-			<button class="buttons">Submit</button>
-			<a href="/tasks/${task.id}/delete"><button>Delete</button></a> 
-			<a href="/tasks"><button>Cancel</button></a>
-		</div>
-		</form:form>
-	</div>
-  </body>
+         </form:form>
+       </div>
+         <div class="form-row  d-flex mb-3 justify-content-start">
+         <div class="p-2">
+            <a href="/tasks/${task.id}/delete"><button class="buttons btn btn-primary btnmargin">Delete</button></a> 
+            </div>
+            <div class="p-2">
+            <a href="/tasks"><button class="buttons btn btn-primary btnmargin">Cancel</button></a>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
-      

@@ -29,15 +29,15 @@ public class TaskDetails {
 	@GeneratedValue(strategy = GenerationType. IDENTITY)
 	private Long id;
 	
-	@NotEmpty
+	@NotEmpty(message="Task Name must not be empty")
 	private String taskname;
     
-	@NotEmpty(message="Description must be atleast 3 characters")
-	@Size (min=3, message="Description must be atleast 3 characters")
+	@NotEmpty(message="Description must not be empty")
+	@Size (min=3, message="It must be atleast 3 characters")
 	private String description;
 	
-	@NotEmpty(message="Description must be atleast 3 characters")
-	@Size (min=3, message="Description must be atleast 3 characters")
+	@NotEmpty(message="Address must not be empty")
+	@Size (min=3, message="It must include the street address,city,state and zipcode")
 	private String address;
 
 	@Column (updatable=false)
